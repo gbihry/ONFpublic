@@ -1,0 +1,704 @@
+:root{
+    --bouton : #00A74F;
+    --danger : #d81832;
+}
+
+button{
+    color: var(--bouton);
+    transition: 0.2s;
+}
+
+.notification {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    animation: left 2s backwards;
+    visibility: hidden;
+}
+
+.notification p i {
+    color: black;
+}
+
+@keyframes left {
+    from {
+        transform: translateX(360px);
+        visibility: hidden;
+    }to {
+        transform: translateX(0px);
+        visibility: visible;
+    }
+}
+
+.log {
+    width: auto;
+    text-align: center;
+    margin: auto auto;
+    justify-content: center ;
+}
+
+.login {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login i {
+    font-size: 1.5rem;
+}
+
+.login p {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0px 10px;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.container{
+    margin-top: 30vh;
+}
+
+.card a:visited{
+    color: black;
+}
+
+.card a:hover{
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+.navbar_point_texte {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* CATALOGUE 1 */
+
+.catalogue{
+    width: 100%;
+    margin: auto auto;
+    height: 80vh;
+}
+
+.catalogue .contenue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.catalogue .contenue .tuile img {
+    aspect-ratio: 1/1;
+    max-width: 250px;
+    max-height: 250px;
+    border: solid 2px #e9ecef;
+    border-radius: 0.325rem;
+    transition: 0.2s ease-in-out;
+}
+
+.catalogue .contenue .tuile {
+    
+    margin: auto auto;
+}
+
+.catalogue .contenue .tuile p {
+    text-align: center;
+    max-width: 250px;
+    font-size: 1.1rem;
+    margin: 10px auto;
+}
+
+
+.catalogue .contenue .tuile img:hover {
+    transform: scale(1.1);
+}
+
+.catalogue_title_type{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--bouton);
+}
+
+
+/* PRODUIT */
+
+.card {
+    width: 18rem; 
+    margin-top: 10px;
+    margin: 10px;
+    max-width: 225px;
+    max-height: 350px;
+}
+
+.card img {
+    aspect-ratio:1/1;
+    border-bottom: solid 2px black;
+}
+
+.card-texte{
+    text-align:center;
+}
+
+.img-produit {
+    height: 300px;
+    width: 300px; 
+    border: 1.5px solid #e9ecef;
+    border-radius: 0.325rem;
+    aspect-ratio : 1/1;
+}
+
+.unProduit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    
+    margin: 10vh;
+}
+
+.produit {
+    width: 100%;
+    height: 75vh;
+}
+
+.produitvet_prix {
+    color: var(--bouton);
+}
+.main-desc p {
+    background-color: #e9ecef;
+    margin: 50px 0px;
+    padding: 25px;
+    font-size: 1.3rem;
+    border-radius: 0.325rem;
+    text-align: initial;
+    border: 1px solid #ced4da;
+}
+
+.main-desc {
+    width: 25%;
+    min-width: 400px;
+    border-radius: 50px;
+}
+
+/* PANIER */
+
+.panier {
+    width: 100%;
+}
+
+.empty_panier {
+    font-size: 2rem;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.panier .content {
+    border: solid 1px #353a40;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    display: flex;
+    max-height: 100px;
+    min-width: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 25px 0px;
+}
+
+.panier .content img{
+    max-height: 90px;
+    min-width: 90px;
+    aspect-ratio: 1/1;
+    border-radius: 0.325rem;
+}
+
+.panier button {
+    border: none;
+    background-color: var(--bouton);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.panier .acheter {
+    margin: 25px;
+}
+
+.panier .panier_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.panier .supprimer button:hover{
+    background-color: var(--danger);
+}
+
+.panier .panier_title_type{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--bouton);
+}
+
+.prixTotal{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.prixTotal p {
+    margin: 0 !important;
+}
+
+.prix_total_span {
+    color: var(--bouton);
+}
+.valide_panier {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 5px;
+}
+@media screen and (max-width: 900px) {
+    .panier .content {
+        display: contents;
+        margin: 25px;
+    }
+
+    .panier .taille, .quantite{
+        justify-content: center;
+        display: flex;
+    }
+
+    .panier .taille p, .quantite p{
+        margin: 5px;
+    }
+}
+
+
+/* RECAPITULATIF */
+
+.recap {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.recap .tile {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recap .tile .title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--bouton);
+}
+
+.recap .tile .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 25px;
+    border: solid 1px grey;
+    border-radius: 25px;
+}
+
+.recap .tile .row .logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.recap .tile .row .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.recap .tile .row .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.recap .tile .row .desc p {
+    font-size: 1.2rem;
+    margin: 0px;
+    width: fit-content;
+}
+
+.recap .tile .row .desc .sub {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+
+/* AJOUT UTILISATEUR */
+
+.addUser_container{
+    max-width: 30%;
+    justify-content:center;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Navbar Dashboard */
+
+.linenav {
+    width: 100%;
+    background-color: #353a40;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0px;
+    flex-direction: row;
+    padding: 0px 10px;
+    flex-wrap: wrap;
+}
+
+.linenav .linenav_item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    padding: 0 10px;
+}
+
+.linenav .linenav_item a {
+    z-index: 2;
+    text-decoration: none;
+    color: white;
+}
+
+.linenav .linenav_item:hover::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.linenav .linenav_item:hover a {
+    color: #353a40 !important;
+}
+
+.linenav .linenav_item.toggle a {
+    color: #353a40 !important;
+}
+
+.linenav .linenav_item.toggle::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: white;
+    color: #353a40;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .linenav {
+        justify-content: space-evenly !important;
+    }
+}
+
+
+/* NAVBAR */
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #353a40;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    flex-direction: row;
+    z-index: 5;
+}
+
+
+.nav > .nav_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-left: 1px;
+}
+
+.nav > .nav_title > .nav_title_item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    height: 50px;
+}
+
+.nav > .nav_title > .nav_title_item > p > i {
+    margin-right: 5px;
+}
+
+.nav > .nav_title > .nav_title_item.custombtn > a {
+    z-index: 2;
+    text-decoration: none;
+    color: white;
+}
+
+.nav > .nav_title > .nav_title_item.custombtn:hover::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.nav > .nav_title > .nav_title_item.custombtn:hover > a {
+    color: #353a40 !important;
+}
+
+.nav > .nav_title > .nav_title_item > p {
+    margin-bottom: 0 !important;
+    cursor: default;
+}
+
+.nav > .nav_title > a > img {
+    cursor: pointer;
+    height: 49px;
+}
+
+.nav > .nav_btn {
+    display: none;
+    padding: 0px 10px;
+    height: 50px;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav > .nav_btn > label {
+    margin-bottom: 0 !important;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nav > .nav_btn > label:hover {
+    background-color: white;
+    color: #353a40;
+}
+
+.nav > .nav_links {
+    display: flex;
+}
+
+.nav > .nav_links > .nav_links_item {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav > .nav_links > .nav_links_item > a {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.nav > .nav_links > .nav_links_item:hover::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.nav > .nav_links > .nav_links_item:hover > a {
+    color: #353a40 !important;
+}
+
+.nav > .nav_links > .nav_links_item > a > i {
+    margin-right: 5px;
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+
+
+/* NAVBAR RESPONSIVE */
+
+@media (max-width: 950px) {
+    .nav > .nav_btn {
+        display: flex;
+    }
+
+    .nav > .nav_links {
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        background-color: #353a40;
+        transition: all 0.2s;
+    }
+
+    .nav > .nav_links > .nav_links_item {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 0px 10px;
+    }
+
+    .nav > #nav-check:checked ~ .nav_links {
+        left: 0;
+        flex-direction: column;
+    }
+
+    #nav_checker_open {
+        display: block;
+    }
+    
+    #nav_checker_close {
+        display: none;
+    }
+    
+    .nav > #nav-check:checked ~ * #nav_checker_open {
+        display: none;
+    }
+    
+    .nav > #nav-check:checked ~ * #nav_checker_close {
+        display: block;
+    }
+
+}
+
+/* Historique Commande */
+
+table.historiquecommande {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: left;
+}
+
+table.historiquecommande tr, table.historiquecommande td, table.historiquecommande th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+table.historiquecommande tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.historiquecommande tr:hover {
+    background-color: #ddd;
+}
+
+table.historiquecommande tr td:last-child {
+    text-align: center;
+}
+
+table.historiquecommande th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #353a40;
+    color: white;
+}
+
+/* A commander */
+
+h1.Acommander {
+    margin: 25px 0px;
+}
+
+/* tab recapitulatif commande epi et vet */
+
+table.recapCommandeEpi {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: left;
+
+}
+
+table.recapCommandeEpi tr, table.recapCommandeEpi td, table.recapCommandeEpi th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+table.recapCommandeEpi tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.recapCommandeEpi tr:hover {
+    background-color: #ddd;
+}
+
+table.recapCommandeEpi tr td:last-child {
+    text-align: center;
+}
+
+table.recapCommandeEpi th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #353a40;
+    color: white;
+}
+
+/* tab recapitulatif commande epi et vet */
